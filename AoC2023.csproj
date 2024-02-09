@@ -38,8 +38,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Structures\**" />
-    <Compile Include="Workers\**" />
+    <Compile Include="Sources\**" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AoCTools\AoCTools.csproj">
