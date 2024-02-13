@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Text;
 using System.Text.RegularExpressions;
 using AoC2023.Structures;
-using AoCTools.File;
 using AoCTools.Loggers;
-using AoCTools.Numbers;
 using AoCTools.Workers;
+using Range = AoCTools.Numbers.Range;
 
 namespace AoC2023.Workers
 {

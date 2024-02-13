@@ -1,5 +1,5 @@
 ﻿using System.Text;
-using AoCTools.Numbers;
+using Range = AoCTools.Numbers.Range;
 
 namespace AoC2023.Structures
 {

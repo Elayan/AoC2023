@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Text;
 using System.Text.RegularExpressions;
-using AoCTools.Numbers;
+using Range = AoCTools.Numbers.Range;
 
 namespace AoC2023.Structures
 {
