@@ -1,2 +1,8 @@
-bin/*
-obj/*
+Sources/bin/*
+Sources/obj/*
+
+Tests/bin/*
+Tests/obj/*
+
+// prevent from pushing my inputs on github :)
+Tests/Data/Days/*
