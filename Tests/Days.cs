@@ -36,10 +36,24 @@ namespace AoC2023_Exec
         }
 
         [Test]
+        public void Day01_bis()
+        {
+            TestOneStar(new Day01Calibrator(), GetDataPath(1, "_bis"), 54601);
+            TestTwoStars(new Day01Calibrator(), GetDataPath(1, "_bis"), 54078);
+        }
+
+        [Test]
         public void Day02()
         {
             TestOneStar(new Day02CubeGame(), GetDataPath(2), 2162);
             TestTwoStars(new Day02CubeGame(), GetDataPath(2), 72513);
+        }
+
+        [Test]
+        public void Day02_bis()
+        {
+            TestOneStar(new Day02CubeGame(), GetDataPath(2, "_bis"), 2416);
+            TestTwoStars(new Day02CubeGame(), GetDataPath(2, "_bis"), 63307);
         }
 
         [Test]
