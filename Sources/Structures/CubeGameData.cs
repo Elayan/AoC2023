@@ -1,8 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Text;
-
-namespace AoC2023.Structures
+﻿namespace AoC2023.Structures
 {
     public class CubeGameData
     {

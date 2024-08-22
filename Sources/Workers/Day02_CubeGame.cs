@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 using AoC2023.Structures;
 using AoCTools.Loggers;
 using AoCTools.Workers;
