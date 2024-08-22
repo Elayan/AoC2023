@@ -29,63 +29,63 @@ namespace AoC2023_Exec
         }
 
         [Test]
-        public void Day1()
+        public void Day01()
         {
             TestOneStar(new Day01Calibrator(), GetDataPath(1), 54877);
             TestTwoStars(new Day01Calibrator(), GetDataPath(1), 54100);
         }
 
         [Test]
-        public void Day2()
+        public void Day02()
         {
             TestOneStar(new Day02CubeGame(), GetDataPath(2), 2162);
             TestTwoStars(new Day02CubeGame(), GetDataPath(2), 72513);
         }
 
         [Test]
-        public void Day3()
+        public void Day03()
         {
             TestOneStar(new Day03Gondola(), GetDataPath(3), 520135);
             TestTwoStars(new Day03Gondola(), GetDataPath(3), 72514855);
         }
 
         [Test]
-        public void Day4()
+        public void Day04()
         {
             TestOneStar(new Day04Scratchcard(), GetDataPath(4), 21959);
             TestTwoStars(new Day04Scratchcard(), GetDataPath(4), 5132675);
         }
 
         [Test]
-        public void Day5()
+        public void Day05()
         {
             TestOneStar(new Day05Almanac(), GetDataPath(5), 484023871);
             TestTwoStars(new Day05Almanac { ReadAsSeedRanges = true }, GetDataPath(5), 46294175);
         }
 
         [Test]
-        public void Day6()
+        public void Day06()
         {
             TestOneStar(new Day06BoatRace(), GetDataPath(6), 449820);
             TestTwoStars(new Day06BoatRace { ReadWithoutSpaces = true }, GetDataPath(6), 42250895);
         }
 
         [Test]
-        public void Day7()
+        public void Day07()
         {
             TestOneStar(new Day07CamelCards(), GetDataPath(7), 253313241);
             TestTwoStars(new Day07CamelCards { UseJokers = true }, GetDataPath(7), 253362743);
         }
 
         [Test]
-        public void Day8()
+        public void Day08()
         {
             TestOneStar(new Day08DesertMap(), GetDataPath(8), 12083);
             TestTwoStars(new Day08DesertMap(), GetDataPath(8), 13385272668829);
         }
 
         [Test]
-        public void Day9()
+        public void Day09()
         {
             TestOneStar(new Day09OasisStability(), GetDataPath(9), 1921197370);
             TestTwoStars(new Day09OasisStability(), GetDataPath(9), 1124);

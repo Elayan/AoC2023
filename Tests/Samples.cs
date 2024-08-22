@@ -28,63 +28,63 @@ namespace AoC2023_Exec
         }
 
         [Test]
-        public void Day1()
+        public void Day01()
         {
             TestOneStar(new Day01Calibrator(), GetSamplePath(1), 142);
             TestTwoStars(new Day01Calibrator(), GetSamplePath(1, "b"), 281);
         }
 
         [Test]
-        public void Day2()
+        public void Day02()
         {
             TestOneStar(new Day02CubeGame(), GetSamplePath(2), 8);
             TestTwoStars(new Day02CubeGame(), GetSamplePath(2), 2286);
         }
 
         [Test]
-        public void Day3()
+        public void Day03()
         {
             TestOneStar(new Day03Gondola(), GetSamplePath(3), 4361);
             TestTwoStars(new Day03Gondola(), GetSamplePath(3), 467835);
         }
 
         [Test]
-        public void Day4()
+        public void Day04()
         {
             TestOneStar(new Day04Scratchcard(), GetSamplePath(4), 13);
             TestTwoStars(new Day04Scratchcard(), GetSamplePath(4), 30);
         }
 
         [Test]
-        public void Day5()
+        public void Day05()
         {
             TestOneStar(new Day05Almanac(), GetSamplePath(5), 35);
             TestTwoStars(new Day05Almanac { ReadAsSeedRanges = true }, GetSamplePath(5), 46);
         }
 
         [Test]
-        public void Day6()
+        public void Day06()
         {
             TestOneStar(new Day06BoatRace(), GetSamplePath(6), 288);
             TestTwoStars(new Day06BoatRace { ReadWithoutSpaces = true }, GetSamplePath(6), 71503);
         }
 
         [Test]
-        public void Day7()
+        public void Day07()
         {
             TestOneStar(new Day07CamelCards(), GetSamplePath(7), 6440);
             TestTwoStars(new Day07CamelCards { UseJokers = true }, GetSamplePath(7), 5905);
         }
 
         [Test]
-        public void Day7_AllHands()
+        public void Day07_AllHands()
         {
             TestOneStar(new Day07CamelCards(), GetSamplePath(7, "b"), 351);
             TestTwoStars(new Day07CamelCards { UseJokers = true }, GetSamplePath(7, "b"), 351);
         }
 
         [Test]
-        public void Day8()
+        public void Day08()
         {
             TestOneStar(new Day08DesertMap(), GetSamplePath(8, "a"), 2);
             TestOneStar(new Day08DesertMap(), GetSamplePath(8, "b"), 6);
@@ -92,7 +92,7 @@ namespace AoC2023_Exec
         }
 
         [Test]
-        public void Day9()
+        public void Day09()
         {
             TestOneStar(new Day09OasisStability(), GetSamplePath(9), 114);
             TestTwoStars(new Day09OasisStability(), GetSamplePath(9), 2);
