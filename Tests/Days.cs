@@ -3,7 +3,6 @@ using AoCTools.Loggers;
 using AoCTools.Workers;
 using NUnit.Framework;
 using System.IO;
-using System.Reflection;
 
 namespace AoC2023_Exec
 {
@@ -61,6 +60,13 @@ namespace AoC2023_Exec
         {
             TestOneStar(new Day03Gondola(), GetDataPath(3), 520135);
             TestTwoStars(new Day03Gondola(), GetDataPath(3), 72514855);
+        }
+
+        [Test]
+        public void Day03_bis()
+        {
+            TestOneStar(new Day03Gondola(), GetDataPath(3, "_bis"), 539433);
+            TestTwoStars(new Day03Gondola(), GetDataPath(3, "_bis"), 75847567);
         }
 
         [Test]

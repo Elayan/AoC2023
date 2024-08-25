@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using AoC2023.Structures;
+﻿using AoC2023.Structures;
 using AoCTools.Frame.TwoDimensions;
 using AoCTools.Loggers;
 using AoCTools.Workers;
@@ -98,7 +96,7 @@ namespace AoC2023.Workers
 
         private static bool CheckIfNumberHasSymbolNeighbor(GondolaEngineNumber number, GondolaEngineSymbol[] symbols)
         {
-            var neighborCoords = GetNeighborCoords(number.Coords);
+            var neighborCoords = Coordinates.GetNeighbors(number.Coords);
             foreach (var symbol in symbols)
             {
                 if (neighborCoords.Any(nc => nc.Equals(symbol.Coords)))
@@ -106,35 +104,6 @@ namespace AoC2023.Workers
             }
 
             return false;
-        }
-
-        private static Coordinates[] GetNeighborCoords(Coordinates[] position)
-        {
-            var neighborCoords = new List<Coordinates>();
-
-            // we're assuming number coords are always from left to right!
-            for (var i = 0; i < position.Length; i++)
-            {
-                var coord = position[i];
-                if (i == 0)
-                {
-                    neighborCoords.Add(new Coordinates(coord.Row - 1, coord.Col - 1));
-                    neighborCoords.Add(new Coordinates(coord.Row, coord.Col - 1));
-                    neighborCoords.Add(new Coordinates(coord.Row + 1, coord.Col - 1));
-                }
-
-                neighborCoords.Add(new Coordinates(coord.Row - 1, coord.Col));
-                neighborCoords.Add(new Coordinates(coord.Row + 1, coord.Col));
-
-                if (i == position.Length - 1)
-                {
-                    neighborCoords.Add(new Coordinates(coord.Row - 1, coord.Col + 1));
-                    neighborCoords.Add(new Coordinates(coord.Row, coord.Col + 1));
-                    neighborCoords.Add(new Coordinates(coord.Row + 1, coord.Col + 1));
-                }
-            }
-
-            return neighborCoords.ToArray();
         }
 
         protected override long WorkTwoStars_Implementation()
@@ -166,7 +135,7 @@ namespace AoC2023.Workers
 
         private static GondolaEngineNumber[] FindNumberNeighborsForSymbol(GondolaEngineSymbol symbol, GondolaEngineNumber[] numbers)
         {
-            var neighboringCoords = GetNeighborCoords(new[] { symbol.Coords });
+            var neighboringCoords = Coordinates.GetNeighbors(new[] { symbol.Coords });
             var neighborNumbers = new List<GondolaEngineNumber>();
             foreach (var number in numbers)
             {

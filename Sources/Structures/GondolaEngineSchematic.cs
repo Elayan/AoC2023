@@ -1,6 +1,4 @@
-﻿using System.Linq;
-using System.Text;
-using AoCTools.Frame;
+﻿using System.Text;
 using AoCTools.Frame.TwoDimensions;
 
 namespace AoC2023.Structures
