@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 using AoC2023.Structures;
 using AoCTools.Loggers;
 using AoCTools.Workers;
@@ -10,8 +7,6 @@ namespace AoC2023.Workers
 {
     public class Day04Scratchcard : WorkerBase
     {
-        private static readonly Regex CardRegex = new Regex("Card (?<id>[0-9]+)", RegexOptions.Compiled);
-
         private ScratchcardData[] _scratchcards;
         public override object Data => _scratchcards;
 
@@ -20,24 +15,26 @@ namespace AoC2023.Workers
             var scratchCards = new List<ScratchcardData>();
             foreach (var line in DataLines)
             {
-                var infos = line.Split(':')[1].Trim();
+                var split = line.Split(':');
+                var id = split[0].Split(' ')[1];
 
-                var numberStrings = infos.Split('|');
+                var numberStrings = split[1].Trim().Split('|');
+
                 var winningStrings = numberStrings[0].Trim().Split(' ');
                 var winnings = new List<int>();
                 foreach (var winningString in winningStrings)
                     if (!string.IsNullOrWhiteSpace(winningString))
                         winnings.Add(int.Parse(winningString));
+
                 var ownedStrings = numberStrings[1].Trim().Split(' ');
                 var owns = new List<int>();
                 foreach (var ownedString in ownedStrings)
                     if (!string.IsNullOrWhiteSpace(ownedString))
                         owns.Add(int.Parse(ownedString));
 
-                var match = CardRegex.Match(line);
                 scratchCards.Add(new ScratchcardData
                 {
-                    Id = match.Value,
+                    Id = id,
                     WinningNumbers = winnings.ToArray(),
                     OwnedNumbers = owns.ToArray()
                 });
